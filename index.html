@@ -4,15 +4,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Pawline</title>
-<meta name="description" content="Pawline: çizgini çek, kediyi balığa ulaştır! Huzurlu, sevimli bir çizgi bulmacası. 26 bahçe, 256 bulmaca, her gün yeni bir günlük bulmaca.">
+<meta name="description" content="Pawline: Kedi acıkmış! Balığa giden yolu bulabilir misin? Sevimli bir zeka oyunu ve mantık bulmacası. 25 bahçe, 400+ bulmaca, her gün yeni bir günlük bulmaca.">
 <meta property="og:title" content="Pawline: Kedi Bulmacası">
-<meta property="og:description" content="Çizgini çek, kediyi balığa ulaştır! Huzurlu, sevimli bir çizgi bulmacası.">
+<meta property="og:description" content="Kedi acıkmış! Balığa giden yolu bulabilir misin? Sevimli bir zeka oyunu ve mantık bulmacası.">
 <meta property="og:image" content="img/tanitim.jpg">
 <meta name="theme-color" content="#9fd4ec">
 <link rel="icon" href="img/favicon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="preload" href="fonts/baloo2.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -37,8 +35,8 @@
           <span lang="en">Draw your line, lead the cat to the fish!</span>
         </p>
         <p class="lede">
-          <span lang="tr">Bahçede huzurlu, sevimli bir çizgi bulmacası. Acele yok, can yok, ceza yok: yalnızca sen, kedin ve keşfedilecek yeni kurallar.</span>
-          <span lang="en">A calm, cozy line puzzle set in a garden. No timers, no lives, no penalties: just you, your cat and new rules to discover.</span>
+          <span lang="tr">Kedi acıkmış, balık da bahçenin öbür ucunda. Parmağınla minderden balığa bir yol çiz, gerisini kedi halleder. Kulağa kolay geliyor, ama her bahçenin kendi kuralları var.</span>
+          <span lang="en">The cat is hungry, and the fish is on the other side of the garden. Draw a path from the cushion to the fish and the cat will do the rest. Sounds easy, but every garden has its own rules.</span>
         </p>
         <div class="cta">
           <a class="chunky soon" aria-disabled="true">
@@ -55,7 +53,7 @@
         <img class="peek" src="img/kedi.webp" width="640" height="630" alt="">
         <div class="paws" aria-hidden="true"><i></i><i></i></div>
         <div class="phone">
-          <img src="img/ekran_boya.webp" width="540" height="960" alt="Pawline oyun ekranı: bahçe tahtasında çizilen çizgi ve ucunda kedi">
+          <img src="img/ekran_boya.webp" width="540" height="960" alt="Pawline oyun ekranı: bahçe tahtasında çizilen çizgi ve ucunda kedi" data-alt-en="Pawline game screen: a line drawn on a garden board with the cat at its tip">
         </div>
       </div>
     </div>
@@ -101,19 +99,19 @@
       <h2><span lang="tr">Bahçeye bir göz at</span><span lang="en">Take a peek</span></h2>
       <p class="sub"><span lang="tr">Her şey elle çizilmiş gibi: pastel bahçeler, tahta çitler, uykucu kediler.</span><span lang="en">Pastel gardens, wooden fences and sleepy cats, all drawn with love.</span></p>
       <div class="gallery" tabindex="0" aria-label="Ekran görüntüleri / Screenshots">
-        <figure class="shot"><div class="frame"><img loading="lazy" src="img/ekran_boya.webp" width="540" height="960" alt=""></div>
+        <figure class="shot"><div class="frame"><img loading="lazy" src="img/ekran_boya.webp" width="540" height="960" alt="Oyun ekranı: boya kovasından geçen pembe çizgi, renkli kapılar ve çizginin ucunda kedi" data-alt-en="Game screen: a pink line passing a paint bucket, colored gates and the cat at the tip of the line"></div>
           <figcaption><span lang="tr">Boya kovaları ve renkli kapılar</span><span lang="en">Paint buckets and colored gates</span></figcaption></figure>
-        <figure class="shot"><div class="frame"><img loading="lazy" src="img/ekran_kural.webp" width="540" height="960" alt=""></div>
+        <figure class="shot"><div class="frame"><img loading="lazy" src="img/ekran_kural.webp" width="540" height="960" alt="Kural kartı: minik bir örnek tahta, kartın üstünde oturan bir kedi ve kuralın kısa açıklaması" data-alt-en="Rule card: a tiny example board, a cat sitting on the card and a short explanation of the rule"></div>
           <figcaption><span lang="tr">Her bahçede yeni bir kural</span><span lang="en">A new rule in every garden</span></figcaption></figure>
-        <figure class="shot"><div class="frame"><img loading="lazy" src="img/ekran_bostan.webp" width="540" height="960" alt=""></div>
+        <figure class="shot"><div class="frame"><img loading="lazy" src="img/ekran_bostan.webp" width="540" height="960" alt="Oyun ekranı: çiçekler, tavşanlar ve havuçlarla dolu bir bahçe tahtası" data-alt-en="Game screen: a garden board with flowers, bunnies and carrots"></div>
           <figcaption><span lang="tr">Çiçekler, tavşanlar ve havuçlar</span><span lang="en">Flowers, bunnies and carrots</span></figcaption></figure>
-        <figure class="shot"><div class="frame"><img loading="lazy" src="img/ekran_kutlama.webp" width="540" height="960" alt=""></div>
+        <figure class="shot"><div class="frame"><img loading="lazy" src="img/ekran_kutlama.webp" width="540" height="960" alt="Çözüm ekranı: kedi balığını yemiş, kazanılan kedi parası sayılıyor" data-alt-en="Solved screen: the cat has eaten its fish and the earned cat coins are counted"></div>
           <figcaption><span lang="tr">Çöz, kedi parası kazan</span><span lang="en">Solve it, earn cat coins</span></figcaption></figure>
-        <figure class="shot"><div class="frame"><img loading="lazy" src="img/ekran_dukkan.webp" width="540" height="960" alt=""></div>
+        <figure class="shot"><div class="frame"><img loading="lazy" src="img/ekran_dukkan.webp" width="540" height="960" alt="Dükkan: kedi için tüy renkleri, şapkalar ve aksesuarlar" data-alt-en="Shop: fur colors, hats and accessories for the cat"></div>
           <figcaption><span lang="tr">Kedini dilediğin gibi süsle</span><span lang="en">Dress up your cat</span></figcaption></figure>
-        <figure class="shot"><div class="frame"><img loading="lazy" src="img/ekran_gunluk.webp" width="540" height="960" alt=""></div>
+        <figure class="shot"><div class="frame"><img loading="lazy" src="img/ekran_gunluk.webp" width="540" height="960" alt="Günlük bulmaca: tarihi ve serisiyle günün bulmacası" data-alt-en="Daily puzzle: today's puzzle with its date and streak"></div>
           <figcaption><span lang="tr">Her gün yeni bir bulmaca</span><span lang="en">A new puzzle every day</span></figcaption></figure>
-        <figure class="shot"><div class="frame"><img loading="lazy" src="img/ekran_bolumler.webp" width="540" height="960" alt=""></div>
+        <figure class="shot"><div class="frame"><img loading="lazy" src="img/ekran_bolumler.webp" width="540" height="960" alt="Bölgeler sayfası: bahçeler ve her birindeki bulmacalar" data-alt-en="Regions page: the gardens and the puzzles in each one"></div>
           <figcaption><span lang="tr">Bahçeden bahçeye keşfe çık</span><span lang="en">Explore garden after garden</span></figcaption></figure>
       </div>
     </div>
@@ -127,7 +125,7 @@
       <div class="features">
         <div class="feature card">
           <span class="badge" style="background:#bfe6c8"><svg width="36" height="36" viewBox="0 0 64 64" aria-hidden="true"><g fill="#fff4e4" stroke="#5b3a29" stroke-width="5"><rect x="6" y="6" width="22" height="22" rx="6"/><rect x="36" y="6" width="22" height="22" rx="6"/><rect x="6" y="36" width="22" height="22" rx="6"/><rect x="36" y="36" width="22" height="22" rx="6" fill="#ffa95e"/></g></svg></span>
-          <div><h3><span lang="tr">256 bulmaca, 26 bahçe</span><span lang="en">256 puzzles, 26 gardens</span></h3>
+          <div><h3><span lang="tr">400+ bulmaca, 25 bahçe</span><span lang="en">400+ puzzles, 25 gardens</span></h3>
           <p><span lang="tr">Her bahçe minik bir tahtada başlar, yavaş yavaş zorlaşır.</span><span lang="en">Each garden starts tiny and grows harder step by step.</span></p></div>
         </div>
         <div class="feature card">
@@ -137,8 +135,8 @@
         </div>
         <div class="feature card">
           <span class="badge" style="background:#f7c3d4"><svg width="36" height="36" viewBox="0 0 64 64" aria-hidden="true"><path d="M32 56 C 10 40, 4 28, 10 18 C 16 8, 28 10, 32 20 C 36 10, 48 8, 54 18 C 60 28, 54 40, 32 56 Z" fill="#ff8fab" stroke="#5b3a29" stroke-width="5" stroke-linejoin="round"/></svg></span>
-          <div><h3><span lang="tr">Ceza yok, acele yok</span><span lang="en">No penalties, no rush</span></h3>
-          <p><span lang="tr">Sayaç, can ya da kaybetme yok. İpucu her zaman yanında.</span><span lang="en">No timers, no lives, no losing. A hint is always there.</span></p></div>
+          <div><h3><span lang="tr">Sakin müzik</span><span lang="en">Calm music</span></h3>
+          <p><span lang="tr">Bulmacanın başında düşünürken eşlik eden sakin bir müzik ve yumuşak sesler.</span><span lang="en">Calm music and soft sounds to keep you company while you think.</span></p></div>
         </div>
         <div class="feature card">
           <span class="badge" style="background:#fbe3a0"><svg width="36" height="36" viewBox="0 0 64 64" aria-hidden="true"><g stroke="#5b3a29" stroke-width="5" stroke-linejoin="round"><path d="M14 30 L12 8 L26 20 M50 30 L52 8 L38 20" fill="#f0aa62"/><ellipse cx="32" cy="36" rx="22" ry="19" fill="#f0aa62"/></g><circle cx="24" cy="36" r="3" fill="#5b3a29"/><circle cx="40" cy="36" r="3" fill="#5b3a29"/><path d="M28 44 q4 4 8 0" fill="none" stroke="#5b3a29" stroke-width="3" stroke-linecap="round"/><path d="M26 14 l6 6 6 -6 -6 -4 z" fill="#ff8fab" stroke="#5b3a29" stroke-width="3"/></svg></span>
@@ -153,7 +151,7 @@
         <div class="feature card">
           <span class="badge" style="background:#cfe8a9"><svg width="36" height="36" viewBox="0 0 64 64" aria-hidden="true"><g stroke="#5b3a29" stroke-width="5" stroke-linejoin="round"><path d="M10 50 h44" stroke-linecap="round"/><path d="M14 50 v-16 h8 v16 M28 50 v-26 h8 v26 M42 50 v-36 h8 v36" fill="#fff4e4"/></g></svg></span>
           <div><h3><span lang="tr">Kolaydan zora</span><span lang="en">Gentle difficulty curve</span></h3>
-          <p><span lang="tr">Zorluk her bahçede yumuşakça artar, ani sıçrama yok.</span><span lang="en">Difficulty rises smoothly in every garden, no sudden spikes.</span></p></div>
+          <p><span lang="tr">İlk bahçeler ısınma turu. Sonlara doğru bir tahtanın başında dakikalarca düşüneceksin.</span><span lang="en">The first gardens are a warm-up. Further in, some boards will keep you thinking for minutes.</span></p></div>
         </div>
       </div>
     </div>

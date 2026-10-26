@@ -13,6 +13,10 @@
   function set(l, remember) {
     root.setAttribute("data-lang", l);
     root.setAttribute("lang", l);
+    document.querySelectorAll("img[data-alt-en]").forEach(function (img) {
+      if (!img.hasAttribute("data-alt-tr")) img.setAttribute("data-alt-tr", img.getAttribute("alt"));
+      img.setAttribute("alt", img.getAttribute(l === "en" ? "data-alt-en" : "data-alt-tr"));
+    });
     document.querySelectorAll("[data-set-lang]").forEach(function (b) {
       b.setAttribute("aria-pressed", String(b.getAttribute("data-set-lang") === l));
     });

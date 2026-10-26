@@ -1,4 +1,13 @@
 /* Pawline sitesi: oyunun pastel bahçe görünümü (UiTheme renkleri, Baloo 2, mürekkep konturlu tıknaz kutular) */
+/* Baloo 2 (SIL OFL 1.1, fonts/OFL.txt) sitenin kendisinden yüklenir: Google Fonts ziyaretçinin IP adresini
+   Google'a gönderirdi. Latin + Türkçe harflere indirilmiş değişken yazı tipi (ağırlık 400-800). */
+@font-face {
+  font-family: "Baloo 2";
+  src: url("fonts/baloo2.woff2") format("woff2");
+  font-weight: 400 800;
+  font-style: normal;
+  font-display: swap;
+}
 :root {
   --ink: #5b3a29;
   --ink-soft: #8a6450;
