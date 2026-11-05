@@ -265,3 +265,8 @@ footer .sleepy { width: 150px; margin: -96px auto 14px; }
   .brand span { display: none; }
   .chunky { font-size: 1.05rem; padding-inline: 16px; }
 }
+
+.table-wrap { overflow-x: auto; margin: 12px 0; }
+.doc table { border-collapse: collapse; width: 100%; font-size: .92em; min-width: 560px; }
+.doc th, .doc td { border: 1px solid rgba(90, 60, 40, .25); padding: 8px 10px; text-align: left; vertical-align: top; color: var(--ink); }
+.doc th { background: rgba(90, 60, 40, .08); }

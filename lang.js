@@ -17,6 +17,12 @@
       if (!img.hasAttribute("data-alt-tr")) img.setAttribute("data-alt-tr", img.getAttribute("alt"));
       img.setAttribute("alt", img.getAttribute(l === "en" ? "data-alt-en" : "data-alt-tr"));
     });
+    document.querySelectorAll("img[data-src-en]").forEach(function (img) {
+      img.setAttribute("src", img.getAttribute(l === "en" ? "data-src-en" : "data-src-tr"));
+    });
+    document.querySelectorAll("meta[data-content-en]").forEach(function (meta) {
+      meta.setAttribute("content", meta.getAttribute(l === "en" ? "data-content-en" : "data-content-tr"));
+    });
     document.querySelectorAll("[data-set-lang]").forEach(function (b) {
       b.setAttribute("aria-pressed", String(b.getAttribute("data-set-lang") === l));
     });
