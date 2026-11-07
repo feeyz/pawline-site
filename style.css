@@ -133,6 +133,7 @@ html[data-lang="en"] [lang="tr"]:not(html) { display: none !important; }
 .chunky small { display: block; font-size: 0.78rem; font-weight: 700; line-height: 1.1; text-shadow: 0 1px 0 var(--ink); opacity: 0.95; }
 .chunky .t { line-height: 1.15; }
 .chunky svg { flex: none; filter: drop-shadow(0 2px 0 var(--ink)); }
+.cta-note { margin: 16px 0 0; font-size: 0.92rem; color: var(--ink-soft); }
 .chunky.soon { --c: var(--peach); cursor: default; }
 .chunky.soon:hover, .chunky.soon:active { transform: none; box-shadow: 0 7px 0 color-mix(in srgb, var(--c) 55%, var(--ink)); }
 
