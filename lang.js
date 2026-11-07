@@ -2,6 +2,8 @@
 (function () {
   var root = document.documentElement;
   function pick() {
+    // /tr/ sayfası hep Türkçe açılır; ana sayfa ve belgeler aşağıdaki sırayla seçer.
+    if (root.getAttribute("data-home") === "tr") return "tr";
     var q = new URLSearchParams(location.search).get("lang");
     if (q === "tr" || q === "en") return q;
     try {
@@ -23,6 +25,8 @@
     document.querySelectorAll("meta[data-content-en]").forEach(function (meta) {
       meta.setAttribute("content", meta.getAttribute(l === "en" ? "data-content-en" : "data-content-tr"));
     });
+    var title = root.getAttribute("data-title-" + l);
+    if (title) document.title = title;
     document.querySelectorAll("[data-set-lang]").forEach(function (b) {
       b.setAttribute("aria-pressed", String(b.getAttribute("data-set-lang") === l));
     });
@@ -32,6 +36,13 @@
   }
   set(pick(), false);
   document.querySelectorAll("[data-set-lang]").forEach(function (b) {
-    b.addEventListener("click", function () { set(b.getAttribute("data-set-lang"), true); });
+    b.addEventListener("click", function () {
+      var l = b.getAttribute("data-set-lang");
+      var home = root.getAttribute("data-home");
+      set(l, true);
+      // Ana sayfanın iki dilinin kendi adresi var; belgeler aynı adreste kalır.
+      if (home === "tr" && l === "en") location.href = "../?lang=en";
+      if (home === "en" && l === "tr") location.href = "tr/";
+    });
   });
 })();
